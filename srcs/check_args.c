@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:07:09 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/08 12:01:38 by creyt            ###   ########.fr       */
+/*   Updated: 2022/09/08 16:37:40 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,4 @@ void	argv_to_int(int argc, char **argv, t_args *args)
 		args->nbr_of_meal = ft_atol(argv[5]);
 	if (args->nbr_of_philo == 0)
 		error_exit(ARG_DEAD);
-//	if (args->time_to_die < args->time_to_eat)
-//		error_exit(ARG_IMP);
 }

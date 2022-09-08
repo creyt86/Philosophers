@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:40:16 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/08 14:56:11 by creyt            ###   ########.fr       */
+/*   Updated: 2022/09/08 16:29:24 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ typedef struct s_args
 	long int		end_time;
 	pthread_mutex_t	mutex;
 	struct s_philo	*philos;
-	//pthread_mutex_t	eat;
 }	t_args;
 
 typedef struct s_philo
@@ -114,5 +113,6 @@ long int		timestamp(void);
 void			print(char *str, t_philo *philo, char *str2);
 void			print_die(char *str, t_philo *philo, long int time, char *str2);
 void			ft_usleep(int time);
+void			can_i_leave_the_table(t_philo *philo);
 
 #endif

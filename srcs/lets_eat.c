@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:11:19 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/08 15:00:31 by creyt            ###   ########.fr       */
+/*   Updated: 2022/09/08 16:36:55 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	lets_eat(t_philo *philos)
 	if (!check_philos(philos))
 	{
 		if (philos->name % 2)
-			ft_usleep(philos->args->time_to_eat / 2);
+			ft_usleep(philos->args->time_to_eat);
 	}
 	while (!check_philos(philos))
 	{
@@ -58,11 +58,7 @@ void	philo_thread(t_philo *philos, t_args *args)
 			free_ture(philos);
 			error_exit("error : bad arguments");
 		}
-		// philos[i].last_meal = timestamp();
 	}
-	// i = -1;
-	// while (++i < philos->args->nbr_of_philo)
-	// 	pthread_join(philos[i].th_philo, NULL);
 	ft_dead(philos, args);
 	exit_thread(philos, args);
 }

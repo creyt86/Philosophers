@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 12:23:22 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/08 15:01:13 by creyt            ###   ########.fr       */
+/*   Updated: 2022/09/08 15:19:20 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_init_mutex(t_philo *philo)
 {
 	pthread_mutex_init(&philo->args->mutex, NULL);
 	pthread_mutex_init(&philo->fork, NULL);
-
 }
 
 void	ft_destroy_mutex(t_philo *philos)

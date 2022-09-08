@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:00:35 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/08 14:59:24 by creyt            ###   ########.fr       */
+/*   Updated: 2022/09/08 16:29:06 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ft_eat(t_philo *philo)
 		philo->args->all_meal_eaten++;
 	if (philo->args->nbr_of_meal != 0
 		&& philo->args->all_meal_eaten == philo->args->nbr_of_philo)
-		error_exit(WHITE"All meals has been eaten by all philos 🍝");
+		error_exit(WHITE"YES All meals has been eaten by all philos 🍝");
 	philo->last_meal = timestamp();
 }
 
