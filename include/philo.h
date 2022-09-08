@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vferraro <vferraro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:40:16 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/06 14:42:16 by vferraro         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:56:11 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@
 
 /* STRUCT */
 typedef struct s_args
-{	
+{
 	int				nbr_of_philo;
 	int				time_to_die;
 	int				time_to_eat;
@@ -113,5 +113,6 @@ void			exit_thread(t_philo *philo, t_args *args);
 long int		timestamp(void);
 void			print(char *str, t_philo *philo, char *str2);
 void			print_die(char *str, t_philo *philo, long int time, char *str2);
+void			ft_usleep(int time);
 
 #endif

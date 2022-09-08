@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gettimeofday_ms.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vferraro <vferraror@student.42lausanne.    +#+  +:+       +#+        */
+/*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:40:44 by vferraro          #+#    #+#             */
-/*   Updated: 2022/09/01 12:01:28 by vferraro         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:55:30 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,17 @@ long int	timestamp(void)
 	if (times == 0)
 		times = get_current_time_ms();
 	return (get_current_time_ms() - times);
+}
+
+void	ft_usleep(int time)
+{
+	int	start;
+
+	start = timestamp();
+	while (1)
+	{
+		if (start + time <= timestamp())
+			break ;
+		usleep(100);
+	}
 }
